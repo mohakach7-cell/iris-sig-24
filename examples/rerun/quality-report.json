@@ -1,0 +1,68 @@
+{
+  "source": "iris-sig24-synthetic",
+  "since": "2026-10-25T00:00:00.000000+00:00",
+  "until": "2026-10-26T00:00:00.000000+00:00",
+  "pages": 2,
+  "seen": 11,
+  "written": 0,
+  "unchanged_or_stale": 4,
+  "filtered": {
+    "below_110_kv": 1,
+    "older_publication": 1,
+    "outside_country": 1,
+    "unsupported_event_type": 1
+  },
+  "rejected": [
+    {
+      "id": "DEMO-BAD",
+      "reason": "Latitude outside Germany sanity envelope",
+      "raw": {
+        "id": "DEMO-BAD",
+        "kind": "grid_connection_request",
+        "title": "SYNTHETIC: 110 kV connection request",
+        "country": "DE",
+        "voltage_kv": 110,
+        "published_at": "2026-10-25T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-BAD",
+        "longitude": 6.7735,
+        "latitude": 999,
+        "city": "Dusseldorf",
+        "synthetic": true
+      }
+    },
+    {
+      "id": "DEMO-MISSING",
+      "reason": "Missing or invalid title",
+      "raw": {
+        "id": "DEMO-MISSING",
+        "kind": "grid_connection_request",
+        "title": "",
+        "country": "DE",
+        "voltage_kv": 110,
+        "published_at": "2026-10-25T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-MISSING",
+        "longitude": 6.7735,
+        "latitude": 51.2277,
+        "city": "Dusseldorf",
+        "synthetic": true
+      }
+    },
+    {
+      "id": null,
+      "reason": "Record must be an object",
+      "raw": "malformed record"
+    }
+  ],
+  "warnings": [
+    {
+      "id": "DEMO-003",
+      "issues": [
+        "missing_coordinates"
+      ]
+    }
+  ],
+  "storage": "sqlite-demo",
+  "status": "completed_with_rejections"
+}

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "iris-sig-24"
+version = "0.1.0"
+description = "IRIS-SIG-24 explicit fixture fallback"
+requires-python = ">=3.12"
+dependencies = ["requests>=2.32,<3", "pyproj>=3.6,<4", "psycopg[binary]>=3.2,<4"]
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+[project.scripts]
+iris-harvest = "iris_harvester.cli:main"
+[tool.setuptools.packages.find]
+include = ["iris_harvester*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,155 @@
+[
+  {
+    "contract": "iris-demo-v1",
+    "next_cursor": "page-2",
+    "items": [
+      {
+        "id": "DEMO-001",
+        "kind": "grid_connection_request",
+        "title": "SYNTHETIC: 110 kV connection request",
+        "country": "DE",
+        "voltage_kv": 110,
+        "published_at": "2026-10-25T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-001",
+        "longitude": 6.7735,
+        "latitude": 51.2277,
+        "city": "Dusseldorf",
+        "synthetic": true
+      },
+      {
+        "id": "DEMO-002",
+        "kind": "substation_registration",
+        "title": "SYNTHETIC: substation registration",
+        "country": "DE",
+        "voltage_kv": 380,
+        "published_at": "2026-10-25T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-002",
+        "longitude": 6.7735,
+        "latitude": 51.2277,
+        "city": "Dusseldorf",
+        "synthetic": true
+      },
+      {
+        "id": "DEMO-003",
+        "kind": "grid_connection_request",
+        "title": "SYNTHETIC: 110 kV connection request",
+        "country": "DE",
+        "voltage_kv": 110,
+        "published_at": "2026-10-25T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-003",
+        "longitude": null,
+        "latitude": null,
+        "city": "Unresolved",
+        "synthetic": true
+      },
+      {
+        "id": "DEMO-LOW",
+        "kind": "grid_connection_request",
+        "title": "SYNTHETIC: 110 kV connection request",
+        "country": "DE",
+        "voltage_kv": 20,
+        "published_at": "2026-10-25T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-LOW",
+        "longitude": 6.7735,
+        "latitude": 51.2277,
+        "city": "Dusseldorf",
+        "synthetic": true
+      },
+      {
+        "id": "DEMO-OLD",
+        "kind": "grid_connection_request",
+        "title": "SYNTHETIC: 110 kV connection request",
+        "country": "DE",
+        "voltage_kv": 110,
+        "published_at": "2026-09-01T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-OLD",
+        "longitude": 6.7735,
+        "latitude": 51.2277,
+        "city": "Dusseldorf",
+        "synthetic": true
+      }
+    ]
+  },
+  {
+    "contract": "iris-demo-v1",
+    "next_cursor": null,
+    "items": [
+      {
+        "id": "DEMO-001",
+        "kind": "grid_connection_request",
+        "title": "SYNTHETIC: 110 kV connection request",
+        "country": "DE",
+        "voltage_kv": 110,
+        "published_at": "2026-10-25T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-001",
+        "longitude": 6.7735,
+        "latitude": 51.2277,
+        "city": "Dusseldorf",
+        "synthetic": true
+      },
+      {
+        "id": "DEMO-BAD",
+        "kind": "grid_connection_request",
+        "title": "SYNTHETIC: 110 kV connection request",
+        "country": "DE",
+        "voltage_kv": 110,
+        "published_at": "2026-10-25T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-BAD",
+        "longitude": 6.7735,
+        "latitude": 999,
+        "city": "Dusseldorf",
+        "synthetic": true
+      },
+      {
+        "id": "DEMO-MISSING",
+        "kind": "grid_connection_request",
+        "title": "",
+        "country": "DE",
+        "voltage_kv": 110,
+        "published_at": "2026-10-25T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-MISSING",
+        "longitude": 6.7735,
+        "latitude": 51.2277,
+        "city": "Dusseldorf",
+        "synthetic": true
+      },
+      {
+        "id": "DEMO-FR",
+        "kind": "grid_connection_request",
+        "title": "SYNTHETIC: 110 kV connection request",
+        "country": "FR",
+        "voltage_kv": 110,
+        "published_at": "2026-10-25T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-FR",
+        "longitude": 6.7735,
+        "latitude": 51.2277,
+        "city": "Dusseldorf",
+        "synthetic": true
+      },
+      {
+        "id": "DEMO-SOLAR",
+        "kind": "generation_unit",
+        "title": "SYNTHETIC: 110 kV connection request",
+        "country": "DE",
+        "voltage_kv": 110,
+        "published_at": "2026-10-25T09:00:00Z",
+        "updated_at": "2026-10-25T10:00:00Z",
+        "source_url": "https://example.invalid/signals/DEMO-SOLAR",
+        "longitude": 6.7735,
+        "latitude": 51.2277,
+        "city": "Dusseldorf",
+        "synthetic": true
+      },
+      "malformed record"
+    ]
+  }
+]
