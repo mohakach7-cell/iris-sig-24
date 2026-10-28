@@ -1,4 +1,4 @@
-# Validation performed — 2026-10-26
+# Validation performed — updated 2026-10-28
 
 Environment: Windows, Python 3.12.0. Exact installed dependency versions are in
 requirements-tested.txt.
@@ -7,7 +7,8 @@ requirements-tested.txt.
 
 Command: `python -m pytest -q --basetemp ../../work/pytest-validation`
 
-Result: **44 passed, 1 skipped**.
+Initial run on 2026-10-26: **44 passed, 1 skipped**.
+The skipped integration test was subsequently executed successfully; see below.
 The work directory was used for test temporary files because the execution environment
 prevented atomic file replacement in its default Windows temporary directory. No file
 permission workaround was added to application behavior.
@@ -37,10 +38,24 @@ The sample failures are deliberate: invalid latitude, missing title and a non-ob
 record. Filters exclude low voltage, an older publication, France and a generation unit.
 The missing-coordinate signal is retained with NULL geometry and a warning.
 
+## PostgreSQL/PostGIS integration — 2026-10-28
+
+Executed by the user in Windows PowerShell against the local Docker container
+using postgis/postgis:16-3.4, after Docker reported the container healthy.
+
+Command: `..\..\work\venv\Scripts\python.exe -m pytest tests/test_postgres.py -v`
+
+Result visible in the user-provided terminal screenshot: **1 passed in 12.34s**.
+The passing test is `test_postgis_rerun_geometry_and_rollback`. It checks PostgreSQL
+16 and PostGIS 3.4 versions, ingestion, repeat-run idempotency, EPSG:25832 geometry,
+NULL geometry for unresolved locations, and transaction rollback on a later page failure.
+This result was observed from the screenshot, not independently rerun by the assistant.
+
+Across the two separate runs, all 45 tests have passed. This is not a claim of a
+single combined 45-test execution or of live MaStR connectivity.
+
 ## Not executed / not established
 
-- PostgreSQL 16/PostGIS 3.4 integration: skipped because no database or Docker is available.
-  tests/test_postgres.py is opt-in and must still pass on the required stack.
 - Live authenticated MaStR acquisition and production event-field mapping.
 - Real HTTP gateway behavior: the adapter is tested using mocks, not a deployed endpoint.
 - Existing IRIS staging compatibility: the schema is proposed, not supplied by IRIS.

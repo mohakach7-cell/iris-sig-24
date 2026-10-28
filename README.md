@@ -67,7 +67,8 @@ For the opt-in integration test, set `IRIS_TEST_DATABASE_URL` to a **dedicated t
 database and run `python -m pytest tests/test_postgres.py -q`.
 The test checks the required database versions, geometry, repeat ingestion and rollback.
 It creates schema objects and removes only rows in its random test namespace.
-The PostGIS test was not run here: Docker/PostgreSQL are unavailable.
+The user executed the PostGIS test on 2026-10-28: **1 passed in 12.34s**,
+confirmed by the supplied terminal screenshot. See VALIDATION.md for the evidence and scope.
 
 ## Mapping and assumptions
 
@@ -142,5 +143,6 @@ No upstream source code is copied. No dashboard or OpenAI key is required.
 - `VALIDATION.md`: actual checks and remaining limitations.
 
 Before calling this a live solution: confirm the endpoint/event coverage, approve the
-source mapping and schema, then run the real PostGIS integration test.
+source mapping and schema. The local PostGIS fixture integration test has passed;
+live source behavior still needs separate validation.
 

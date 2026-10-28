@@ -18,7 +18,9 @@ trois enregistrements de l'exemple contiennent volontairement des erreurs.
 
 - L'adresse exacte de l'API et les champs qui prouvent les événements recherchés.
 - Le schéma attendu par IRIS et le périmètre géographique.
-- Le test réel sous PostgreSQL 16 / PostGIS 3.4, préparé mais non exécuté ici.
+Le test réel sous PostgreSQL 16 / PostGIS 3.4 a réussi le 28 octobre 2026 :
+**1 passed en 12,34 secondes**, selon la capture du terminal fournie.
+Les 44 autres tests avaient déjà réussi lors de la vérification initiale.
 
 SOURCE_ASSESSMENT.md contient les références et les questions précises.
 VALIDATION.md distingue les tests effectués de ceux qui restent à exécuter.
@@ -28,5 +30,6 @@ puis les tests. Les décisions essentielles sont de ne pas confondre une install
 avec une demande de raccordement, de conserver la traçabilité, et de rendre les
 relances sûres.
 
-Aucun email n'a été envoyé et aucun dépôt n'a été publié.
+Le projet a été publié par l'utilisateur sur GitHub. Aucun email n'a été envoyé
+par l'assistant. Les documents locaux mis à jour doivent encore être reportés sur GitHub.
 
